@@ -31,7 +31,7 @@ iface=s0-eth1
 for page in 'amazon' 'nytimes' 'wsj' 'wiki'; do
   for max_RTT in 5 25 50; do #NOTE: these are 20, 100, 200 divided across 4 links
 	dir=$rootdir/$page
-	echo 'RTT/4: ' 4*$max_RTT
+	echo 'RTT/4: ' $max_RTT
 	echo 'page: '  $page
 	echo 'dir: ' $dir
 	python tfo.py --bw-host 4 \
